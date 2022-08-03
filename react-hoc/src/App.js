@@ -1,13 +1,9 @@
 import React from 'react'
 
-
-const App = ({list, side}) => {
-
-  const filteredList = list.filter( char => char.side === side)
-
+const App = ({list}) => {
   return (
     <ul>
-      { filteredList.map( (char, index) => {
+      { list.map( (char, index) => {
           return (
             <li key={char.name + index}>
               <strong>{char.name}</strong> -&nbsp;
@@ -19,5 +15,11 @@ const App = ({list, side}) => {
   )
 }
 
+const withFilteredProps = Component => ({list, side}) => {
+  const filteredList = list.filter( char => char.side === side)
+  return <Component list={filteredList}/>
+}
 
-export default App
+const FilteredList = withFilteredProps(App)
+
+export default FilteredList
