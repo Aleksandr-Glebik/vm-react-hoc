@@ -4,10 +4,17 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
+const  starWarsChars = [
+  {name: 'Дарк Вайдер', side: 'dark'},
+  {name: 'Люк Скайвокер', side: 'light'},
+  {name: 'Палпатин', side: 'dark'},
+  {name: 'Обиван Кеноби', side: 'light'}
+]
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <App />
+    <App list={starWarsChars} side='light'/>
   </React.StrictMode>
 )
 
