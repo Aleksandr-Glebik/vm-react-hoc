@@ -1,21 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import FilteredList from './App'
+import App from './App'
 import reportWebVitals from './reportWebVitals'
-
-
-const  starWarsChars = [
-  {name: 'Дарк Вайдер', side: 'dark'},
-  {name: 'Люк Скайвокер', side: 'light'},
-  {name: 'Палпатин', side: 'dark'},
-  {name: 'Обиван Кеноби', side: 'light'}
-]
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <FilteredList list={starWarsChars} side='dark'/>
+    <App />
   </React.StrictMode>
 )
 
